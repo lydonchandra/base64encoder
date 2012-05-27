@@ -33,11 +33,11 @@ imgCanvas.src = "data:image/jpeg;base64," + base64.encode(jpgBinaryData);
 
 img0.src = "data:image/jpeg;base64," + base64.encode(jpgBinaryData);
 
-// HTML
+<!-- HTML -->
 <img src="" id="img0"/>
 <canvas id=canvas width=800 height=900></canvas>
 
 
 //--------------------------
-Fork from http://code.google.com/p/stringencoders/source/browse/trunk/javascript/base64.js?r=230
+Forked from http://code.google.com/p/stringencoders/source/browse/trunk/javascript/base64.js?r=230
 //--------------------------
