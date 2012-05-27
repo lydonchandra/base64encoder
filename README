@@ -7,7 +7,7 @@
 //---------------------------
 // Why not use built-in btoa() ?
 //---------------------------
-1. btoa is NOT available to use in **web worker** in Webkit based browser (Google Chrome 18.0.1025.168, Version 5.1.3 (7534.53.10)),
+1. btoa is NOT available to use in **web worker** in Webkit based browser (Google Chrome 18.0.1025.168, Safari Version 5.1.3 (7534.53.10)),
   ----|| only works in Firefox 12.0 ||------
 
 To get JPG binary data to encode, use Binary Ajax from https://github.com/lydonchandra/BinaryAjaxPost
