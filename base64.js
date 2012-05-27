@@ -1,3 +1,9 @@
+//--------------------
+// Fork from http://code.google.com/p/stringencoders/source/browse/trunk/javascript/base64.js?r=230
+// Difference:
+// $ getbyte() does '& 0xFF' to get byte value of a byte
+// $ removed DOMException because getbyte never return value > 255
+//--------------------
 var base64 = {};
 base64.PADCHAR = '=';
 base64.ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

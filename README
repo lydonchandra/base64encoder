@@ -1,0 +1,43 @@
+//-----------------------------
+//Why use this base64 library:
+//-----------------------------
+1. encode binary byte value (not unicode) of JPG file into base64
+2. which can be assigned to <img>.src and canvas.src as dataURL
+
+//---------------------------
+// Why not use built-in btoa() ?
+//---------------------------
+1. btoa is NOT available to use in **web worker** in Webkit based browser (Google Chrome 18.0.1025.168, Version 5.1.3 (7534.53.10)),
+  ----|| only works in Firefox 12.0 ||------
+
+To get JPG binary data to encode, use Binary Ajax from https://github.com/lydonchandra/BinaryAjaxPost
+
+//------------------
+//Tested browser
+//------------------
+Chrome 18+, Safari 5.1+, Firefox 12.0
+
+//---------------
+//Usage:
+//---------------
+
+// javascripts:
+var img0 = document.getElementById('img0');
+
+var imgCanvas = new Image();
+imgCanvas.onload = function() {
+    canvasContext.drawImage(img0, 0, 0);
+}
+
+imgCanvas.src = "data:image/jpeg;base64," + base64.encode(jpgBinaryData);
+
+img0.src = "data:image/jpeg;base64," + base64.encode(jpgBinaryData);
+
+// HTML
+<img src="" id="img0"/>
+<canvas id=canvas width=800 height=900></canvas>
+
+
+//--------------------------
+Fork from http://code.google.com/p/stringencoders/source/browse/trunk/javascript/base64.js?r=230
+//--------------------------
